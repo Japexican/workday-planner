@@ -14,8 +14,8 @@ const checkHour = () => {
     }
 });
 };
-
-checkHour();
+setInterval(checkHour,60000)
+checkHour()
 
 const currDay = new Date().toDateString().split(" ").splice(0,3).join(", ")
 document.querySelector("#currentDay").innerHTML=`Today is ${currDay}.`
